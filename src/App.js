@@ -1,23 +1,23 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import ContactForm from './components/ContactForm';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* Hero Section */}
+      <section className="hero">
+        <div className="hero-content">
+            <img src="/logo.png" alt="Maximum Data" className="animated-logo" />
+         
+          <a href="#contact" className="cta-button">SUA SOLUÇÃO EM DADOS ESTA AQUI</a>
+        </div>
+      </section>
+
+      {/* Contact Form Section */}
+      <section id="contact" className="contact-section">
+        <ContactForm />
+      </section>
     </div>
   );
 }

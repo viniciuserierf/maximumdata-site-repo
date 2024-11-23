@@ -1,9 +1,11 @@
+/* Global Styles */
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', sans-serif;
-  background-color: #f7f9fc;
-  color: #1f3b6c;
+  font-family: 'Poppins', sans-serif; /* Exemplo com a fonte Poppins */
+  font-size: 16px; /* Garanta que o tamanho da fonte seja consistente */
+  background-color: #000000; /* Fundo preto */
+  color: #00b3ff;
 }
 
 .App {
@@ -12,103 +14,121 @@ body {
 
 /* Hero Section */
 .hero {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #000000;
-  color: rgb(0, 0, 0);
-}
-
-.hero-content {
+  height: 100vh; /* Ocupa toda a altura da tela */
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  text-align: center;
-  animation: fadeIn 1.5s ease-in-out;
+  align-items: center;
+  background-color: #000000; /* Fundo preto */
+  color: #ffffff;
+  position: relative;
 }
 
+/* Logo */
 .animated-logo {
-  width: 860px;
-  animation: pulse 2s infinite;
-  margin-bottom: -100px;
+  width: 300px; /* Tamanho do logo */
+  margin-bottom: 20px; /* Espaço entre o logo e o botão */
 }
 
-.cta-button {
-  padding: 12px 24px;
+/* Botão Contêiner */
+.cta-container {
+  font-family: 'Poppins', sans-serif; /* Exemplo com a fonte Poppins */
+  font-size: 5px; /* Garanta que o tamanho da fonte seja consistente */
+  position: absolute;
+  bottom: -20px; /* Posiciona o botão logo na divisão da seção */
+  width: 100%;
+  text-align: center;
+}
+
+/* Botão */
+.sliding-button {
+  padding: 15px 30px;
   background-color: #00080c;
   color: #00b3ff;
-  border: 1.9px solid #0f1010;
+  border: 2px solid #00b3ff;
   border-radius: 5px;
   text-decoration: none;
   font-weight: bold;
-  margin-top: 120px;
-  transition: background-color 0.3s ease;
+  font-size: 16px; /* Altere este valor para ajustar o tamanho da fonte */
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.cta-button:hover {
-  background-color: #a9b6bc;
-}
 
-/* Contact Form Section */
-.contact-section {
-  padding: 50px 20px;
+/* Hover no botão */
+.sliding-button:hover {
   background-color: #00b3ff;
+  color: #000000;
+}
+
+/* Sobre Nós Section */
+.about-section {
+  padding: 80px 20px;
+  background-color: #00b3ff; /* Fundo azul */
+  color: #ffffff; /* Texto branco */
+  text-align: center;
+}
+
+.about-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.about-section p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Seção de Contato */
+.contact-section {
+  padding: 80px 20px;
+  background-color: #000000; /* Fundo preto */
+  color: #00b3ff; /* Texto azul */
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
 }
 
 .form-container {
-  max-width: 400px;
+  max-width: 500px;
   margin: 0 auto;
-  background-color: #ffffff;
-  padding: 30px;
+  background-color: #ffffff; /* Fundo branco */
+  padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-input, textarea {
+.form-container input,
+.form-container textarea {
+  font-family: 'Poppins', sans-serif; 
+  font-size: 16px;
   width: 100%;
-  padding: 12px;
-  margin-bottom: 15px;
-  border: 1px solid #c0c6d4;
+  padding: px;
+  margin-bottom: 10px;
+  border: 2px solid #00b3ff;
   border-radius: 5px;
-  font-size: 14px;
-  color: #1f3b6c;
+  font-size: 16px;
+  color: #00b3ff;
 }
 
-button {
+.form-container button {
   width: 100%;
-  padding: 12px;
-  background-color: #6fa3ef;
-  color: white;
+  padding: 15px;
+  background-color: #00b3ff;
+  color: #ffffff;
   border: none;
-  border-radius: 50px;
+  border-radius: 10px;
+  font-size: 16px; 
+  font-weight: bold;
   cursor: pointer;
-  font-size: 18px;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-button:hover {
-  background-color: #5793d8;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes pulse {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05);
-  }
+.form-container button:hover {
+  background-color: #007acc; /* Azul escuro ao passar o mouse */
 }

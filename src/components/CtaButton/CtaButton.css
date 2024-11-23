@@ -1,0 +1,50 @@
+/* Contêiner do botão */
+.cta-container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  z-index: 10;
+}
+
+/* Botão com animação */
+.sliding-button {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 12px 24px;
+  background-color: #00080c;
+  color: #00b3ff;
+  border: 1.9px solid #0f1010;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  opacity: 1;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Botão visível */
+.pulsing {
+  animation: pulse 2s infinite;
+}
+
+/* Botão escondido */
+.hidden {
+  opacity: 0;
+  transform: translateY(50px); /* Sai suavemente para baixo */
+}
+
+/* Efeito de pulsar */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1) translateX(-50%);
+  }
+  50% {
+    transform: scale(1.05) translateX(-50%);
+  }
+}

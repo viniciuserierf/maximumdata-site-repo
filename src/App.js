@@ -1,22 +1,52 @@
-import React from 'react';
-import './App.css';
-import ContactForm from './components/ContactForm';
+import React from "react";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
       {/* Hero Section */}
       <section className="hero">
-        <div className="hero-content">
-            <img src="/logo.png" alt="Maximum Data" className="animated-logo" />
-         
-          <a href="#contact" className="cta-button">SUA SOLUÇÃO EM DADOS ESTA AQUI</a>
+        <img src="/logo.png" alt="Maximum Data" className="animated-logo" />
+
+        <div className="cta-container">
+          <a href="#about" className="sliding-button">
+            SUA SOLUÇÃO EM DADOS ESTÁ AQUI
+          </a>
         </div>
       </section>
 
-      {/* Contact Form Section */}
+      {/* About Section */}
+      <section id="about" className="about-section">
+        <h2>Sobre Nós</h2>
+        <p>
+          Na Maximum Data, acreditamos no poder dos dados para transformar
+          negócios. Oferecemos soluções personalizadas e tecnologias inovadoras
+          para ajudar empresas a alcançar seus objetivos e tomar decisões mais
+          inteligentes.
+        </p>
+      </section>
+
+      {/* Contact Section */}
       <section id="contact" className="contact-section">
-        <ContactForm />
+        <h2>Entre em Contato</h2>
+        <div className="form-container">
+          <form>
+            <input type="text" name="name" placeholder="Seu Nome" required />
+            <input
+              type="email"
+              name="email"
+              placeholder="Seu E-mail"
+              required
+            />
+            <textarea
+              name="message"
+              placeholder="Sua Mensagem"
+              rows="5"
+              required
+            ></textarea>
+            <button type="submit">Enviar Mensagem</button>
+          </form>
+        </div>
       </section>
     </div>
   );
